@@ -6,14 +6,14 @@ This is the homebrew repo for Nucleus binaries
 
 ## CLI
 ```sh
-brew install nucleuscloud/nucleus/nucleus
+brew install nucleuscloud/tap/nucleus
 ```
 
 ## Tapping Separately
 You can generally add the nucleus repo to homebrew
 
 ```sh
-brew tap nucleuscloud/nucleus
+brew tap nucleuscloud/tap
 ```
 
 Then install and individual command
