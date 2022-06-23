@@ -16,7 +16,7 @@ You can generally add the nucleus repo to homebrew
 brew tap nucleuscloud/tap
 ```
 
-Then install and individual command
+Then install the individual command
 
 ```sh
 brew install nucleus
