@@ -9,6 +9,11 @@ This is the homebrew repo for Nucleus binaries
 brew install nucleuscloud/tap/nucleus
 ```
 
+## Seacrypt
+```sh
+brew install nucleuscloud/tap/seacrypt
+```
+
 ## Tapping the repo itself
 The `nucleus` repo can be separately tapped:
 
@@ -16,7 +21,7 @@ The `nucleus` repo can be separately tapped:
 brew tap nucleuscloud/tap
 ```
 
-Then install the individual command:
+Then install any individual command:
 
 ```sh
 brew install nucleus
