@@ -5,21 +5,21 @@
 class Nucleus < Formula
   desc "CLI for interfacing with Nucleus"
   homepage "https://usenucleus.cloud"
-  version "0.0.7"
+  version "0.0.8"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.7/nucleus_0.0.7_darwin_arm64.tar.gz"
-      sha256 "4c9ad4251a7230e1f904d95a670547e8f20f968034b15378ce30e9abe391c08f"
+    if Hardware::CPU.intel?
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.8/nucleus_0.0.8_darwin_amd64.tar.gz"
+      sha256 "73c40f0008a7aec319a962fb4c693ec0cb9bdc09dc814194476b8f1fb70b9e4f"
 
       def install
         bin.install "nucleus"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.7/nucleus_0.0.7_darwin_amd64.tar.gz"
-      sha256 "d41349b766586c7ed46e0582bc3210065bc282d93665278388f550ee2eae4d9d"
+    if Hardware::CPU.arm?
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.8/nucleus_0.0.8_darwin_arm64.tar.gz"
+      sha256 "2ea0756c5824806e36b38233e279161230ceabf7a22d957c543e137e22435c15"
 
       def install
         bin.install "nucleus"
@@ -28,17 +28,17 @@ class Nucleus < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.7/nucleus_0.0.7_linux_amd64.tar.gz"
-      sha256 "9a8608861b898e2df818c2759ab2c23abb92acc31a20fdfad54febee2501cbb4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.8/nucleus_0.0.8_linux_arm64.tar.gz"
+      sha256 "ef0fdaf4a63d73cccbbe287c6cd3fbcf8a117cf630a4dfdc58e942439843415a"
 
       def install
         bin.install "nucleus"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.7/nucleus_0.0.7_linux_arm64.tar.gz"
-      sha256 "d5b915abed8ef2fa4a4bf26e17677555d34b18e5f6f3916b4b953e8e95a2b0a1"
+    if Hardware::CPU.intel?
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.8/nucleus_0.0.8_linux_amd64.tar.gz"
+      sha256 "50bec00ac8436d41424ca4f2e27739c27f89720916ef8d516661007a4120506d"
 
       def install
         bin.install "nucleus"
