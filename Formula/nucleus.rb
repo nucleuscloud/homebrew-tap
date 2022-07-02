@@ -5,21 +5,21 @@
 class Nucleus < Formula
   desc "CLI for interfacing with Nucleus"
   homepage "https://usenucleus.cloud"
-  version "0.0.9"
+  version "0.0.10"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.9/nucleus_0.0.9_darwin_amd64.tar.gz"
-      sha256 "0e0b57d59f6d0b8313731378db0b048713e3d6725518b6f52df71ca1859af86d"
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.10/nucleus_0.0.10_darwin_amd64.tar.gz"
+      sha256 "da2d7a53302f909104d04470ec993ca25c8c5ffe7dd23b0ea713c36c2b077939"
 
       def install
         bin.install "nucleus"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.9/nucleus_0.0.9_darwin_arm64.tar.gz"
-      sha256 "fe9cdb072b2cc3a2975cc6bebe282e2c8b5ab120cea955f5b784449e9729222f"
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.10/nucleus_0.0.10_darwin_arm64.tar.gz"
+      sha256 "bd9001391b34f9f8a5c1dac56c96e26d3283e97638dc061ff16ae685940a7a72"
 
       def install
         bin.install "nucleus"
@@ -28,17 +28,17 @@ class Nucleus < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.9/nucleus_0.0.9_linux_arm64.tar.gz"
-      sha256 "1b37a20f0edf026cc8187c0980c37a0484a6bed8d4f0511fac83f3f3d8df3f15"
+    if Hardware::CPU.intel?
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.10/nucleus_0.0.10_linux_amd64.tar.gz"
+      sha256 "57ba876b4f8c1e7086ceb8a70cac523abda5bfda8c667e0d80c7ca2c03c1e937"
 
       def install
         bin.install "nucleus"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.9/nucleus_0.0.9_linux_amd64.tar.gz"
-      sha256 "ab2e70909a487fced4c83be7de3bc567b37bf05a5c1045ece8103a18b4ca6e69"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.10/nucleus_0.0.10_linux_arm64.tar.gz"
+      sha256 "6ce171aeddf07563d5b0d05bbb045f84f5ebc101f5ea7cbb2d676bcc602ec151"
 
       def install
         bin.install "nucleus"
