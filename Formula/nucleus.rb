@@ -5,21 +5,21 @@
 class Nucleus < Formula
   desc "CLI for interfacing with Nucleus"
   homepage "https://usenucleus.cloud"
-  version "0.0.8"
+  version "0.0.9"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.8/nucleus_0.0.8_darwin_amd64.tar.gz"
-      sha256 "73c40f0008a7aec319a962fb4c693ec0cb9bdc09dc814194476b8f1fb70b9e4f"
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.9/nucleus_0.0.9_darwin_amd64.tar.gz"
+      sha256 "0e0b57d59f6d0b8313731378db0b048713e3d6725518b6f52df71ca1859af86d"
 
       def install
         bin.install "nucleus"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.8/nucleus_0.0.8_darwin_arm64.tar.gz"
-      sha256 "2ea0756c5824806e36b38233e279161230ceabf7a22d957c543e137e22435c15"
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.9/nucleus_0.0.9_darwin_arm64.tar.gz"
+      sha256 "fe9cdb072b2cc3a2975cc6bebe282e2c8b5ab120cea955f5b784449e9729222f"
 
       def install
         bin.install "nucleus"
@@ -29,16 +29,16 @@ class Nucleus < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.8/nucleus_0.0.8_linux_arm64.tar.gz"
-      sha256 "ef0fdaf4a63d73cccbbe287c6cd3fbcf8a117cf630a4dfdc58e942439843415a"
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.9/nucleus_0.0.9_linux_arm64.tar.gz"
+      sha256 "1b37a20f0edf026cc8187c0980c37a0484a6bed8d4f0511fac83f3f3d8df3f15"
 
       def install
         bin.install "nucleus"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.8/nucleus_0.0.8_linux_amd64.tar.gz"
-      sha256 "50bec00ac8436d41424ca4f2e27739c27f89720916ef8d516661007a4120506d"
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.9/nucleus_0.0.9_linux_amd64.tar.gz"
+      sha256 "ab2e70909a487fced4c83be7de3bc567b37bf05a5c1045ece8103a18b4ca6e69"
 
       def install
         bin.install "nucleus"
