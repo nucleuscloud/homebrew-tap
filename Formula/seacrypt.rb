@@ -5,21 +5,21 @@
 class Seacrypt < Formula
   desc "CLI and Library for decrypting secrets via AWS KMS"
   homepage "https://usenucleus.cloud"
-  version "0.0.3"
+  version "0.0.4"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/nucleuscloud/seacrypt/releases/download/v0.0.3/seacrypt_0.0.3_darwin_amd64.tar.gz"
-      sha256 "37757dce5e6408afee906a17b2224bfa7cb5edfe38e5394bfb3a25be64af9302"
+    if Hardware::CPU.arm?
+      url "https://github.com/nucleuscloud/seacrypt/releases/download/v0.0.4/seacrypt_0.0.4_darwin_arm64.tar.gz"
+      sha256 "c107d88119f1b17ee9085d890281b49e3b9e0fbf457e31e9e9a857f4511bc8c4"
 
       def install
         bin.install "seacrypt"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/nucleuscloud/seacrypt/releases/download/v0.0.3/seacrypt_0.0.3_darwin_arm64.tar.gz"
-      sha256 "b91286c3906d357b8a722431ae8151aec9ffcb8944b94683e604bf25270a29dd"
+    if Hardware::CPU.intel?
+      url "https://github.com/nucleuscloud/seacrypt/releases/download/v0.0.4/seacrypt_0.0.4_darwin_amd64.tar.gz"
+      sha256 "63803a28b4bd1eb70f4e01a271d6953262c1db052702538d0718a40fa36b79f2"
 
       def install
         bin.install "seacrypt"
@@ -29,16 +29,16 @@ class Seacrypt < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nucleuscloud/seacrypt/releases/download/v0.0.3/seacrypt_0.0.3_linux_arm64.tar.gz"
-      sha256 "62f029e2c7c8c52bfcfaa1cf23e01ee0f5532d59cf5d580cbb384ebad762e699"
+      url "https://github.com/nucleuscloud/seacrypt/releases/download/v0.0.4/seacrypt_0.0.4_linux_arm64.tar.gz"
+      sha256 "e0c032a68900b36f1825b5ca8a846d65d9d3027a84618780d02d99b8149f9a80"
 
       def install
         bin.install "seacrypt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nucleuscloud/seacrypt/releases/download/v0.0.3/seacrypt_0.0.3_linux_amd64.tar.gz"
-      sha256 "ea6dbc91aaa1355c4a35cb949bd38418c42ddd47a01345813aa099a3efa60cb6"
+      url "https://github.com/nucleuscloud/seacrypt/releases/download/v0.0.4/seacrypt_0.0.4_linux_amd64.tar.gz"
+      sha256 "d0ffcf3c913258c089be5614eb82ab03939cad3f3b157f3e87d6845875f50cae"
 
       def install
         bin.install "seacrypt"
