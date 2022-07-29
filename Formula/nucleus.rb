@@ -5,21 +5,21 @@
 class Nucleus < Formula
   desc "CLI for interfacing with Nucleus"
   homepage "https://usenucleus.cloud"
-  version "0.0.15"
+  version "0.0.16"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.15/nucleus_0.0.15_darwin_amd64.tar.gz"
-      sha256 "ac821e6bf055741c20687a9c61891485441c49130b3b0ad0fbd8ba51b32f2689"
+    if Hardware::CPU.arm?
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.16/nucleus_0.0.16_darwin_arm64.tar.gz"
+      sha256 "b1097bab2427f49b7138b1fe3ebf6a60ebb8389eabad945600395980f6f0f4e2"
 
       def install
         bin.install "nucleus"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.15/nucleus_0.0.15_darwin_arm64.tar.gz"
-      sha256 "4a463249b09607456f7d0dd0bbd24cfce0d5f31a1b0c5433785aaa0b70719156"
+    if Hardware::CPU.intel?
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.16/nucleus_0.0.16_darwin_amd64.tar.gz"
+      sha256 "ca7013dae71d0c3b4a03a5f5b29fcfafccab2def616914c0bf46b64df684b477"
 
       def install
         bin.install "nucleus"
@@ -29,16 +29,16 @@ class Nucleus < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.15/nucleus_0.0.15_linux_arm64.tar.gz"
-      sha256 "921349dd12d15da09f68f78ae3cdc18764e92858e409ff45e2bdc71ef96fcb67"
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.16/nucleus_0.0.16_linux_arm64.tar.gz"
+      sha256 "8691453ea6e898b1d81c81ba4d0c85ef3f23064e0d3e6c621cdd9cfe46122ef8"
 
       def install
         bin.install "nucleus"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.15/nucleus_0.0.15_linux_amd64.tar.gz"
-      sha256 "608de3fcee13bc7dafeddbcf9800e5690ab18c9f1183a1a2b4351181d870368f"
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.16/nucleus_0.0.16_linux_amd64.tar.gz"
+      sha256 "e68308074160e3c1faf8053112af9f07bf7d9e6cd1b4a1f8027b61134cd6ffc9"
 
       def install
         bin.install "nucleus"
