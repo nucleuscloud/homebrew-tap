@@ -5,21 +5,21 @@
 class Nucleus < Formula
   desc "CLI for interfacing with Nucleus"
   homepage "https://nucleuscloud.com"
-  version "0.0.38"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.38/nucleus_0.0.38_darwin_arm64.tar.gz"
-      sha256 "a4c5ec13b7762c9142b82b7a827b0903cd8a1c3eeb96c0fab12f7ebd0d521441"
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.1.0/nucleus_0.1.0_darwin_arm64.tar.gz"
+      sha256 "1e9973875edcee5e860bc3b9c88ef440195eb64fb2b42b8c9372ff2ef5dfcb94"
 
       def install
         bin.install "nucleus"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.38/nucleus_0.0.38_darwin_amd64.tar.gz"
-      sha256 "e262344cf18f0a5fb3a1757ff24ef5907cb75cd5a116844b9d413616ff6091e4"
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.1.0/nucleus_0.1.0_darwin_amd64.tar.gz"
+      sha256 "227f10be4e8dd96ace9c06086e252aaa64dd561340f89abf2516a360420c4ec8"
 
       def install
         bin.install "nucleus"
@@ -28,17 +28,17 @@ class Nucleus < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.38/nucleus_0.0.38_linux_arm64.tar.gz"
-      sha256 "36343939ece0fc435dbef27d0647826497c85216572155a04a54d58f756d3935"
+    if Hardware::CPU.intel?
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.1.0/nucleus_0.1.0_linux_amd64.tar.gz"
+      sha256 "9cbfe27eff7a6b61d1a7fa896a93e3db2447c63707f8f4829ab82527bd57926a"
 
       def install
         bin.install "nucleus"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nucleuscloud/cli/releases/download/v0.0.38/nucleus_0.0.38_linux_amd64.tar.gz"
-      sha256 "18b432a7106152218c2989ddd075e07970f75829aa49e569b5c8ebb653e8dfaf"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nucleuscloud/cli/releases/download/v0.1.0/nucleus_0.1.0_linux_arm64.tar.gz"
+      sha256 "0b81a89918ff9ad2b267a8c4c56c3985066f83441b42151431a02b6667b44ddc"
 
       def install
         bin.install "nucleus"
