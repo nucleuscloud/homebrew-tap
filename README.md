@@ -1,21 +1,21 @@
-# Homebrew for Nucleus
+# Homebrew for Nucleus and Neosync
 
-This is the homebrew repo for Nucleus binaries
+This is the homebrew repo for Nucleus and Neosync binaries
 
 # Installation
 
-## CLI
+## Neosync CLI
+```sh
+brew install nucleuscloud/tap/neosync
+```
+
+## Nucleus CLI
 ```sh
 brew install nucleuscloud/tap/nucleus
 ```
 
-## Seacrypt
-```sh
-brew install nucleuscloud/tap/seacrypt
-```
-
 ## Tapping the repo itself
-The `nucleus` repo can be separately tapped:
+The `nucleuscloud` repo can be separately tapped:
 
 ```sh
 brew tap nucleuscloud/tap
