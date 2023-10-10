@@ -15,7 +15,7 @@ brew install nucleuscloud/tap/nucleus
 ```
 
 ## Tapping the repo itself
-The `nucleus` repo can be separately tapped:
+The `nucleuscloud` repo can be separately tapped:
 
 ```sh
 brew tap nucleuscloud/tap
