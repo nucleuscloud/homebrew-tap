@@ -5,21 +5,21 @@
 class Neosync < Formula
   desc "CLI for interfacing with Neosync"
   homepage "https://www.neosync.dev"
-  version "0.4.45"
+  version "0.4.46"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/nucleuscloud/neosync/releases/download/v0.4.45/neosync_0.4.45_darwin_amd64.tar.gz"
-      sha256 "d7fcbce3f9e2f5d819ac84dd523b09310e1b3ef1f11fd8fc38b70aa650816c28"
+      url "https://github.com/nucleuscloud/neosync/releases/download/v0.4.46/neosync_0.4.46_darwin_amd64.tar.gz"
+      sha256 "e3b4255ca21b98755c3a043adc00e8f8883816191f8c0662904b3662f75cc2f1"
 
       def install
         bin.install "neosync"
       end
     end
     on_arm do
-      url "https://github.com/nucleuscloud/neosync/releases/download/v0.4.45/neosync_0.4.45_darwin_arm64.tar.gz"
-      sha256 "47e97cb993fddee9b2c1c447b45ea2aee79a4658b7500484c3c050a3a9f31172"
+      url "https://github.com/nucleuscloud/neosync/releases/download/v0.4.46/neosync_0.4.46_darwin_arm64.tar.gz"
+      sha256 "517265eab9bb2df97437611dd6a052acbd392b14b562f91ec53a4c6ba4adc34e"
 
       def install
         bin.install "neosync"
@@ -30,8 +30,8 @@ class Neosync < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/nucleuscloud/neosync/releases/download/v0.4.45/neosync_0.4.45_linux_amd64.tar.gz"
-        sha256 "97d245df54f7b9a0112f3250b358c2bed7f46bdbe288780c55bffe0746a05652"
+        url "https://github.com/nucleuscloud/neosync/releases/download/v0.4.46/neosync_0.4.46_linux_amd64.tar.gz"
+        sha256 "28b67b6cca6deb5641c059c993c31f0947f5055be363b384c5a8402be9263390"
 
         def install
           bin.install "neosync"
@@ -40,8 +40,8 @@ class Neosync < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/nucleuscloud/neosync/releases/download/v0.4.45/neosync_0.4.45_linux_arm64.tar.gz"
-        sha256 "77fd389a11d07ba9c087bdbfb5e0e4ac60f542acd7db4cde9601092d741fcc6b"
+        url "https://github.com/nucleuscloud/neosync/releases/download/v0.4.46/neosync_0.4.46_linux_arm64.tar.gz"
+        sha256 "8e420af736b7b47cbc551d1bad002020e6572d097f8fe9dc157c09ed3f2a43a2"
 
         def install
           bin.install "neosync"
